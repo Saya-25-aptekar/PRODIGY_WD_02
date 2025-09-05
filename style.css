@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(-45deg, #ff9a9e, #a1c4fd);
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+}
+
+/* Left Side (Stopwatch) */
+.left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.buttons {
+  margin-top: 25px;
+  display: flex;
+  gap: 12px;
+}
+
+button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: white;
+  background: #444;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #ff4d6d;
+}
+
+/* Record Button */
+#record {
+  background: #222;     
+  font-weight: bold;      
+  color: #fff;            
+}
+
+#record:hover {
+  background: #000;       
+  color: #ffcc00;        
+}
+
+/* Right Side (History) */
+.right {
+  flex: 1;
+  background: rgba(17, 17, 17, 0.6);  
+  backdrop-filter: blur(12px);       
+  padding: 20px;
+  overflow-y: auto;
+  border-left: 2px solid rgba(255, 204, 0, 0.6); 
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.7);
+}
+
+.right h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #ffcc00;               
+  text-shadow: 0px 0px 8px #ffcc00; 
+}
+
+#records {
+  list-style: none;
+  padding: 0;
+}
+
+#records li {
+  background: rgba(255, 255, 255, 0.1); 
+  margin: 8px 0;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  transition: 0.3s;
+}
+
+#records li:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(6px);
+  box-shadow: 0px 0px 10px rgba(255, 204, 0, 0.4);
+}
